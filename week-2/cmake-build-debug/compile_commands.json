@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/student/CLionProjects/week-2/cmake-build-debug",
-  "command": "/usr/bin/cc -g -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/week_2.dir/main.c.o -c /home/student/CLionProjects/week-2/main.c",
-  "file": "/home/student/CLionProjects/week-2/main.c",
-  "output": "/home/student/CLionProjects/week-2/cmake-build-debug/CMakeFiles/week_2.dir/main.c.o"
-}
-]
