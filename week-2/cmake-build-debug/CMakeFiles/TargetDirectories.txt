@@ -1,0 +1,3 @@
+/home/student/CLionProjects/week-2/cmake-build-debug/CMakeFiles/week_2.dir
+/home/student/CLionProjects/week-2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/student/CLionProjects/week-2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
