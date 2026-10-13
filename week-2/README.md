@@ -22,6 +22,7 @@ make: Leaving directory '/home/student/CLionProjects/week-2'
 Process finished with exit code 0
 
 Not corrected code valgrind output:
+
 /usr/bin/make -f /home/student/CLionProjects/week-2/Makefile -C /home/student/CLionProjects/week-2 valgrind
 make: Entering directory '/home/student/CLionProjects/week-2'
 valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./memory_demo
