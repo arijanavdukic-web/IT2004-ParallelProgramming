@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -g -std=c99
 TARGET = memory_demo
-SOURCE = library.c
+SOURCE = original.c
 
 all: $(TARGET)
 
