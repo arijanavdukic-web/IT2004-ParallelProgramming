@@ -1,0 +1,84 @@
+GLOBAL SUM PRECISION AND PERFORMANCE TEST
+==========================================
+
+==========================================
+ARRAY SIZE: 2^10 = 1024 elements
+Reference sum: 51.200000051200003
+------------------------------------------
+Standard double   | Error: 1.368478247388e-12 | Runtime: 0.000003 s
+Long double       | Error: 6.834810495349e-16 | Runtime: 0.000004 s
+Pairwise          | Error: 2.869232629266e-15 | Runtime: 0.000027 s
+Kahan             | Error: 2.869232629266e-15 | Runtime: 0.000019 s
+Knuth             | Error: 2.869232629266e-15 | Runtime: 0.000053 s
+
+==========================================
+ARRAY SIZE: 2^12 = 4096 elements
+Reference sum: 204.800000204800011
+------------------------------------------
+Standard double   | Error: 3.281012961320e-11 | Runtime: 0.000010 s
+Long double       | Error: 1.147693051706e-14 | Runtime: 0.000013 s
+Pairwise          | Error: 1.147693051706e-14 | Runtime: 0.000017 s
+Kahan             | Error: 1.147693051706e-14 | Runtime: 0.000033 s
+Knuth             | Error: 1.147693051706e-14 | Runtime: 0.000052 s
+
+==========================================
+ARRAY SIZE: 2^14 = 16384 elements
+Reference sum: 819.200000819200045
+------------------------------------------
+Standard double   | Error: 4.815315368667e-10 | Runtime: 0.000740 s
+Long double       | Error: 1.748601263785e-14 | Runtime: 0.000085 s
+Pairwise          | Error: 4.590772206825e-14 | Runtime: 0.000073 s
+Kahan             | Error: 4.590772206825e-14 | Runtime: 0.000130 s
+Knuth             | Error: 4.590772206825e-14 | Runtime: 0.000350 s
+
+==========================================
+ARRAY SIZE: 2^16 = 65536 elements
+Reference sum: 3276.800003276800182
+------------------------------------------
+Standard double   | Error: 4.294651301251e-10 | Runtime: 0.000227 s
+Long double       | Error: 8.679723606519e-13 | Runtime: 0.000236 s
+Pairwise          | Error: 1.836308882730e-13 | Runtime: 0.000338 s
+Kahan             | Error: 1.836308882730e-13 | Runtime: 0.000799 s
+Knuth             | Error: 1.836308882730e-13 | Runtime: 0.001009 s
+
+==========================================
+ARRAY SIZE: 2^18 = 262144 elements
+Reference sum: 13107.200013107200728
+------------------------------------------
+Standard double   | Error: 3.597341891037e-08 | Runtime: 0.000688 s
+Long double       | Error: 1.196109877810e-11 | Runtime: 0.002820 s
+Pairwise          | Error: 7.345235530920e-13 | Runtime: 0.001689 s
+Kahan             | Error: 7.345235530920e-13 | Runtime: 0.002456 s
+Knuth             | Error: 7.345235530920e-13 | Runtime: 0.007945 s
+
+==========================================
+ARRAY SIZE: 2^20 = 1048576 elements
+Reference sum: 52428.800052428802910
+------------------------------------------
+Standard double   | Error: 4.945147971114e-07 | Runtime: 0.003995 s
+Long double       | Error: 7.326654838380e-10 | Runtime: 0.005639 s
+Pairwise          | Error: 2.938094212368e-12 | Runtime: 0.007516 s
+Kahan             | Error: 2.938094212368e-12 | Runtime: 0.008869 s
+Knuth             | Error: 2.938094212368e-12 | Runtime: 0.015053 s
+
+==========================================
+ARRAY SIZE: 2^22 = 4194304 elements
+Reference sum: 209715.200209715211642
+------------------------------------------
+Standard double   | Error: 1.889060960991e-05 | Runtime: 0.020156 s
+Long double       | Error: 5.754685616921e-10 | Runtime: 0.033257 s
+Pairwise          | Error: 1.175237684947e-11 | Runtime: 0.046090 s
+Kahan             | Error: 1.175237684947e-11 | Runtime: 0.138587 s
+Knuth             | Error: 1.175237684947e-11 | Runtime: 0.102491 s
+
+==========================================
+ARRAY SIZE: 2^24 = 16777216 elements
+Reference sum: 838860.800838860846568
+------------------------------------------
+Standard double   | Error: 1.419517167278e-05 | Runtime: 0.044870 s
+Long double       | Error: 5.379666845329e-08 | Runtime: 0.062069 s
+Pairwise          | Error: 4.700950739789e-11 | Runtime: 0.162659 s
+Kahan             | Error: 4.700950739789e-11 | Runtime: 0.246981 s
+Knuth             | Error: 4.700950739789e-11 | Runtime: 0.248264 s
+
+All tests completed!
