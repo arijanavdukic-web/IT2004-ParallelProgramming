@@ -1,21 +1,66 @@
-# IT 2004 - Parallel Programming
+# Global Sum – Assignment
 
-This repository has the code examples for the IT 2004 Parallel Programming labs. We add new examples every week, so the repository grows as the semester goes on.
+## What is the assignment about?
 
-## What this repository is for
+This program compares five ways of adding many decimal numbers. Computers cannot represent every decimal number exactly, so small rounding errors can happen when numbers are added.
 
-Parallel programming means splitting work so that several processors can do it at the same time. Before we can do that well, we need to be comfortable with C, memory and measuring performance. Then we can start writing programs that run on many processes.
+The five methods are:
 
-The examples are short programs that each focus on one idea. They are not complete projects. Read them, run them, and change them to see what happens. They are meant to go along with the lectures, not replace them.
+1. **Standard double** – adds the values one by one using `double`.
+2. **Long double** – uses `long double` for greater precision.
+3. **Pairwise** – adds values in pairs and then combines the partial sums.
+4. **Kahan** – keeps track of small rounding errors during addition.
+5. **Knuth** – calculates and keeps the small error from each addition.
 
-## How it's organized
+## Project files
 
-Each week has its own folder, for example `week-01` and `week-02`. If a week has more than one example, each one gets its own subfolder, like `week-02/example-01`.
+- `main.c` creates the test data, runs the methods, and measures their execution time.
+- `sum_algorithms.c` contains the five summation methods.
+- `sum_algorithms.h` contains the function declarations.
+- `Makefile` builds the program.
+- `results.txt` contains the output from our test run.
 
-Every example comes with a Makefile, so you can build and run it the same way every week. Examples that need a longer explanation also have their own README. If there is one, read it before you look at the code.
+## How did we test?
 
-Some examples come in pairs: a version with a problem in it, and a fixed version. Compare the two and figure out what changed and why.
+We tested arrays with sizes from 2^10 (1,024 values) to 2^24 (16,777,216 values).
 
-## Language and tools
+Half of the values were `0.1`, and the other half were `0.0000000001`.
 
-The examples are written in C. The parallel examples use MPI. We also use tools like Valgrind and gdb to find bugs and see what a program is actually doing.
+For every method, the program calculates the sum and compares it with a reference sum. It also measures how long the calculation takes.
+
+- **Error** tells us how far the calculated result is from the reference sum. A smaller error means a more accurate result.
+- **Runtime** tells us how many seconds the calculation took. A smaller runtime means a faster calculation in that run.
+
+## Results for the largest array
+
+| Method | Error | Runtime (seconds) |
+|---|---:|---:|
+| Standard double | 1.419517167278e-05 | 0.044870 |
+| Long double | 5.379666845329e-08 | 0.062069 |
+| Pairwise | 4.700950739789e-11 | 0.162659 |
+| Kahan | 4.700950739789e-11 | 0.246981 |
+| Knuth | 4.700950739789e-11 | 0.248264 |
+
+These are the results from one run on our virtual machine. Runtime can change between runs and computers.
+
+## What did we learn?
+
+Standard `double` was generally fast, but it had the largest error. `long double` reduced the error. Pairwise, Kahan, and Knuth produced the smallest errors in our tests, but took longer.
+
+This is important in parallel programming because a large set of values can be divided between several threads or processors. Each one calculates a partial sum, and those partial sums are combined. Since the order of floating-point additions can affect the result, the summation method can affect accuracy.
+
+## How to build and run
+
+Open a terminal in the project folder and run:
+
+```bash
+make clean
+make
+./sum_test
+```
+
+To save the output in `results.txt`, run:
+
+```bash
+./sum_test | tee results.txt
+```
