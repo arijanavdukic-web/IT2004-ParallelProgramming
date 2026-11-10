@@ -127,171 +127,170 @@ timer.c:14:5: missed: statement clobbers memory: clock_gettime (1, &tstop_cpu);
 ### LIKWID OUTPUT FROM LAB
 ========== stream_original ==========
 --------------------------------------------------------------------------------
-CPU name:       Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
-CPU type:       Intel Core SandyBridge processor
-CPU clock:      3.29 GHz
+CPU name: Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
+CPU type: Intel Core SandyBridge processor
+CPU clock: 3.29 GHz
 --------------------------------------------------------------------------------
 Failed to execute command: ./stream_original
 --------------------------------------------------------------------------------
 Group 1: FLOPS_DP
 +--------------------------------------+---------+------------+
-|                 Event                | Counter | HWThread 0 |
+| Event | Counter | HWThread 0 |
 +--------------------------------------+---------+------------+
-|           INSTR_RETIRED_ANY          |  FIXC0  |      65757 |
-|         CPU_CLK_UNHALTED_CORE        |  FIXC1  |     440054 |
-|         CPU_CLK_UNHALTED_REF         |  FIXC2  |     440055 |
-| FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE |   PMC0  |          0 |
-| FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE |   PMC1  |         20 |
-|       SIMD_FP_256_PACKED_DOUBLE      |   PMC2  |          0 |
+| INSTR_RETIRED_ANY | FIXC0 | 65757 |
+| CPU_CLK_UNHALTED_CORE | FIXC1 | 440054 |
+| CPU_CLK_UNHALTED_REF | FIXC2 | 440055 |
+| FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE | PMC0 | 0 |
+| FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE | PMC1 | 20 |
+| SIMD_FP_256_PACKED_DOUBLE | PMC2 | 0 |
 +--------------------------------------+---------+------------+
 
 +-------------------------+------------+
-|          Metric         | HWThread 0 |
+| Metric | HWThread 0 |
 +-------------------------+------------+
-|   Runtime (RDTSC) [s]   |     0.0010 |
-|   Runtime unhalted [s]  |     0.0001 |
-|       Clock [MHz]       |  3292.2051 |
-|           CPI           |     6.6921 |
-|       DP [MFLOP/s]      |     0.0194 |
-|     AVX DP [MFLOP/s]    |          0 |
-|     Packed [MUOPS/s]    |          0 |
-|     Scalar [MUOPS/s]    |     0.0194 |
-| Vectorization ratio [%] |          0 |
+| Runtime (RDTSC) [s] | 0.0010 |
+| Runtime unhalted [s] | 0.0001 |
+| Clock [MHz] | 3292.2051 |
+| CPI | 6.6921 |
+| DP [MFLOP/s] | 0.0194 |
+| AVX DP [MFLOP/s] | 0 |
+| Packed [MUOPS/s] | 0 |
+| Scalar [MUOPS/s] | 0.0194 |
+| Vectorization ratio [%] | 0 |
 +-------------------------+------------+
 
 ========== stream_opt1 ==========
 --------------------------------------------------------------------------------
-CPU name:       Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
-CPU type:       Intel Core SandyBridge processor
-CPU clock:      3.29 GHz
+CPU name: Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
+CPU type: Intel Core SandyBridge processor
+CPU clock: 3.29 GHz
 Failed to execute command: ./stream_opt1
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Group 1: FLOPS_DP
 +--------------------------------------+---------+------------+
-|                 Event                | Counter | HWThread 0 |
+| Event | Counter | HWThread 0 |
 +--------------------------------------+---------+------------+
-|           INSTR_RETIRED_ANY          |  FIXC0  |       5263 |
-|         CPU_CLK_UNHALTED_CORE        |  FIXC1  |      23490 |
-|         CPU_CLK_UNHALTED_REF         |  FIXC2  |      23496 |
-| FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE |   PMC0  |          0 |
-| FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE |   PMC1  |          9 |
-|       SIMD_FP_256_PACKED_DOUBLE      |   PMC2  |          0 |
+| INSTR_RETIRED_ANY | FIXC0 | 5263 |
+| CPU_CLK_UNHALTED_CORE | FIXC1 | 23490 |
+| CPU_CLK_UNHALTED_REF | FIXC2 | 23496 |
+| FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE | PMC0 | 0 |
+| FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE | PMC1 | 9 |
+| SIMD_FP_256_PACKED_DOUBLE | PMC2 | 0 |
 +--------------------------------------+---------+------------+
 
 +-------------------------+--------------+
-|          Metric         |  HWThread 0  |
+| Metric | HWThread 0 |
 +-------------------------+--------------+
-|   Runtime (RDTSC) [s]   | 2.075212e-05 |
-|   Runtime unhalted [s]  | 7.135060e-06 |
-|       Clock [MHz]       |    3291.3529 |
-|           CPI           |       4.4632 |
-|       DP [MFLOP/s]      |       0.4337 |
-|     AVX DP [MFLOP/s]    |            0 |
-|     Packed [MUOPS/s]    |            0 |
-|     Scalar [MUOPS/s]    |       0.4337 |
-| Vectorization ratio [%] |            0 |
+| Runtime (RDTSC) [s] | 2.075212e-05 |
+| Runtime unhalted [s] | 7.135060e-06 |
+| Clock [MHz] | 3291.3529 |
+| CPI | 4.4632 |
+| DP [MFLOP/s] | 0.4337 |
+| AVX DP [MFLOP/s] | 0 |
+| Packed [MUOPS/s] | 0 |
+| Scalar [MUOPS/s] | 0.4337 |
+| Vectorization ratio [%] | 0 |
 +-------------------------+--------------+
 
 ========== stream_opt2 ==========
 --------------------------------------------------------------------------------
-CPU name:       Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
-CPU type:       Intel Core SandyBridge processor
-CPU clock:      3.29 GHz
+CPU name: Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
+CPU type: Intel Core SandyBridge processor
+CPU clock: 3.29 GHz
 Failed to execute command: ./stream_opt2
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Group 1: FLOPS_DP
 +--------------------------------------+---------+------------+
-|                 Event                | Counter | HWThread 0 |
+| Event | Counter | HWThread 0 |
 +--------------------------------------+---------+------------+
-|           INSTR_RETIRED_ANY          |  FIXC0  |       5306 |
-|         CPU_CLK_UNHALTED_CORE        |  FIXC1  |      44275 |
-|         CPU_CLK_UNHALTED_REF         |  FIXC2  |      44286 |
-| FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE |   PMC0  |          0 |
-| FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE |   PMC1  |          9 |
-|       SIMD_FP_256_PACKED_DOUBLE      |   PMC2  |          0 |
+| INSTR_RETIRED_ANY | FIXC0 | 5306 |
+| CPU_CLK_UNHALTED_CORE | FIXC1 | 44275 |
+| CPU_CLK_UNHALTED_REF | FIXC2 | 44286 |
+| FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE | PMC0 | 0 |
+| FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE | PMC1 | 9 |
+| SIMD_FP_256_PACKED_DOUBLE | PMC2 | 0 |
 +--------------------------------------+---------+------------+
 
 +-------------------------+--------------+
-|          Metric         |  HWThread 0  |
+| Metric | HWThread 0 |
 +-------------------------+--------------+
-|   Runtime (RDTSC) [s]   | 3.197112e-05 |
-|   Runtime unhalted [s]  | 1.344837e-05 |
-|       Clock [MHz]       |    3291.4033 |
-|           CPI           |       8.3443 |
-|       DP [MFLOP/s]      |       0.2815 |
-|     AVX DP [MFLOP/s]    |            0 |
-|     Packed [MUOPS/s]    |            0 |
-|     Scalar [MUOPS/s]    |       0.2815 |
-| Vectorization ratio [%] |            0 |
+| Runtime (RDTSC) [s] | 3.197112e-05 |
+| Runtime unhalted [s] | 1.344837e-05 |
+| Clock [MHz] | 3291.4033 |
+| CPI | 8.3443 |
+| DP [MFLOP/s] | 0.2815 |
+| AVX DP [MFLOP/s] | 0 |
+| Packed [MUOPS/s] | 0 |
+| Scalar [MUOPS/s] | 0.2815 |
+| Vectorization ratio [%] | 0 |
 +-------------------------+--------------+
 
 ========== stream_opt3 ==========
 --------------------------------------------------------------------------------
-CPU name:       Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
-CPU type:       Intel Core SandyBridge processor
-CPU clock:      3.29 GHz
+CPU name: Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
+CPU type: Intel Core SandyBridge processor
+CPU clock: 3.29 GHz
 Failed to execute command: ./stream_opt3
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Group 1: FLOPS_DP
 +--------------------------------------+---------+------------+
-|                 Event                | Counter | HWThread 0 |
+| Event | Counter | HWThread 0 |
 +--------------------------------------+---------+------------+
-|           INSTR_RETIRED_ANY          |  FIXC0  |       5320 |
-|         CPU_CLK_UNHALTED_CORE        |  FIXC1  |      35563 |
-|         CPU_CLK_UNHALTED_REF         |  FIXC2  |      35640 |
-| FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE |   PMC0  |          0 |
-| FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE |   PMC1  |          9 |
-|       SIMD_FP_256_PACKED_DOUBLE      |   PMC2  |          0 |
+| INSTR_RETIRED_ANY | FIXC0 | 5320 |
+| CPU_CLK_UNHALTED_CORE | FIXC1 | 35563 |
+| CPU_CLK_UNHALTED_REF | FIXC2 | 35640 |
+| FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE | PMC0 | 0 |
+| FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE | PMC1 | 9 |
+| SIMD_FP_256_PACKED_DOUBLE | PMC2 | 0 |
 +--------------------------------------+---------+------------+
 
 +-------------------------+--------------+
-|          Metric         |  HWThread 0  |
+| Metric | HWThread 0 |
 +-------------------------+--------------+
-|   Runtime (RDTSC) [s]   | 2.564668e-05 |
-|   Runtime unhalted [s]  | 1.080245e-05 |
-|       Clock [MHz]       |    3285.0100 |
-|           CPI           |       6.6848 |
-|       DP [MFLOP/s]      |       0.3509 |
-|     AVX DP [MFLOP/s]    |            0 |
-|     Packed [MUOPS/s]    |            0 |
-|     Scalar [MUOPS/s]    |       0.3509 |
-| Vectorization ratio [%] |            0 |
+| Runtime (RDTSC) [s] | 2.564668e-05 |
+| Runtime unhalted [s] | 1.080245e-05 |
+| Clock [MHz] | 3285.0100 |
+| CPI | 6.6848 |
+| DP [MFLOP/s] | 0.3509 |
+| AVX DP [MFLOP/s] | 0 |
+| Packed [MUOPS/s] | 0 |
+| Scalar [MUOPS/s] | 0.3509 |
+| Vectorization ratio [%] | 0 |
 +-------------------------+--------------+
 
 ========== stream_opt3_fast ==========
 --------------------------------------------------------------------------------
-CPU name:       Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
-CPU type:       Intel Core SandyBridge processor
-CPU clock:      3.29 GHz
+CPU name: Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz
+CPU type: Intel Core SandyBridge processor
+CPU clock: 3.29 GHz
 Failed to execute command: ./stream_opt3_fast
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 Group 1: FLOPS_DP
 +--------------------------------------+---------+------------+
-|                 Event                | Counter | HWThread 0 |
+| Event | Counter | HWThread 0 |
 +--------------------------------------+---------+------------+
-|           INSTR_RETIRED_ANY          |  FIXC0  |       5291 |
-|         CPU_CLK_UNHALTED_CORE        |  FIXC1  |      26998 |
-|         CPU_CLK_UNHALTED_REF         |  FIXC2  |      26994 |
-| FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE |   PMC0  |          0 |
-| FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE |   PMC1  |          9 |
-|       SIMD_FP_256_PACKED_DOUBLE      |   PMC2  |          0 |
+| INSTR_RETIRED_ANY | FIXC0 | 5291 |
+| CPU_CLK_UNHALTED_CORE | FIXC1 | 26998 |
+| CPU_CLK_UNHALTED_REF | FIXC2 | 26994 |
+| FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE | PMC0 | 0 |
+| FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE | PMC1 | 9 |
+| SIMD_FP_256_PACKED_DOUBLE | PMC2 | 0 |
 +--------------------------------------+---------+------------+
 
 +-------------------------+--------------+
-|          Metric         |  HWThread 0  |
+| Metric | HWThread 0 |
 +-------------------------+--------------+
-|   Runtime (RDTSC) [s]   | 2.007888e-05 |
-|   Runtime unhalted [s]  | 8.200557e-06 |
-|       Clock [MHz]       |    3292.7031 |
-|           CPI           |       5.1026 |
-|       DP [MFLOP/s]      |       0.4482 |
-|     AVX DP [MFLOP/s]    |            0 |
-|     Packed [MUOPS/s]    |            0 |
-|     Scalar [MUOPS/s]    |       0.4482 |
-| Vectorization ratio [%] |            0 |
+| Runtime (RDTSC) [s] | 2.007888e-05 |
+| Runtime unhalted [s] | 8.200557e-06 |
+| Clock [MHz] | 3292.7031 |
+| CPI | 5.1026 |
+| DP [MFLOP/s] | 0.4482 |
+| AVX DP [MFLOP/s] | 0 |
+| Packed [MUOPS/s] | 0 |
+| Scalar [MUOPS/s] | 0.4482 |
+| Vectorization ratio [%] | 0 |
 +-------------------------+--------------+
-
