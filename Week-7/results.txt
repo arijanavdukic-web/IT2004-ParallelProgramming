@@ -1,0 +1,34 @@
+STENCIL IMPLEMENTATION BENCHMARK RESULTS
+=========================================
+
+CPU: Intel Core i7-4770 @ 3.40GHz
+CPUs available to VM: 2
+OpenMP threads: 2
+Iterations: 10000
+Grid size: 2002 x 2002
+
+1. ORIGINAL - stencil_opt2
+Initialization: 0.061972 s
+Cache flush:    187.693392 s
+Stencil:        99.862169 s
+Total:          287.630596 s
+
+2. OPTIMIZED - stencil_opt4
+Initialization: 0.042937 s
+Cache flush:    174.880080 s
+Stencil:        101.330924 s
+Total:          276.259890 s
+
+3. OPTIMIZED - stencil_opt6
+Initialization: 0.040573 s
+Cache flush:    161.790770 s
+Stencil:        101.036658 s
+Total:          263.592428 s
+
+COMPARISON
+==========
+
+opt4 improvement over opt2: 3.95%
+opt6 improvement over opt2: 8.36%
+
+Fastest implementation: stencil_opt6
